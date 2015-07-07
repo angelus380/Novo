@@ -1,0 +1,105 @@
+p {
+	margin: 0px;
+	font-size: 13px;
+}
+
+ul {
+	padding:0px;
+	list-style-type: none;
+	margin:0px;
+	padding:0px;
+}
+
+body {
+	margin:0px;
+	margin-top:38px;
+	padding:0px;
+}
+
+.block {
+	height: 40px;
+	width: 100%;
+	border-bottom: 1px solid gray;
+	background-color: #f6f6f6;
+	position:fixed;
+	top:0;
+}
+
+.form {
+	display:flex;
+	justify-content: center;
+	padding-top:9px;
+}
+
+.tab {
+	width: 100%;
+	border-bottom: 1px solid gray;
+	padding: 20px;
+	padding-left: 60px;
+}
+
+.tab li {
+	display: inline;
+	padding-right: 30px;
+}
+
+.tab a {
+	color:blue;
+}
+
+.container {
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 800px;
+	padding-left: 60px;
+	padding-top: 15px;
+}
+
+.info-container {
+	display:flex;
+	flex-wrap: wrap;
+	align-content: space-between;
+	border-bottom: 1px solid gray;
+	padding: 20px;
+	margin-bottom:20px;
+}
+
+.info-list {
+	padding-right: 15px;
+}
+
+.start {
+	color: gray;
+	padding-bottom: 20px;
+}
+
+.title {
+	color: blue;
+	padding-bottom: 20px;
+}
+
+.result {
+	padding-bottom: 20px;
+	padding-right: 50px;
+}
+
+.button {
+	background-color: blue;
+	color:white;
+	border-style:none;
+
+}
+
+.google {
+	height: 23px;
+	margin-right: 10px
+}
+
+.size {
+	height: 400px;
+}
+
+.link {
+	color:green;
+}

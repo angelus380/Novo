@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="main.css" type="text/css">
+</head>
+
+<body>
+	<h1>Contact us</h1>
+		
+	<form>
+
+		<div>
+			<label for="name">Name</label>
+			<input type="text" placeholder="required" required>
+		</div>
+
+		<div>
+			<label for= "email">Email</label>
+			<input type="text" placeholder="required" required>
+		</div>
+
+		<div>
+			<label for= "company">Company</label>
+			<input type="text" placeholder="Company name">
+		</div>
+
+		<div>
+			<label>
+				I whant to receive news and updates
+				<input type="checkbox" id= "checkbox" name="checkbox">
+			</label>
+		</div>
+		<div>
+			<select class="select" >
+				<option>Social Network</option>
+				<option>Internet</option>
+				<option>Word of mouth</option>
+				<option>Other</option>
+			</select>
+		</div>
+
+		<div>
+			<button type= "submit" name="button">Submit</button>
+		</div>
+	</form>
+
+
+</body>
+</html>

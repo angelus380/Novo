@@ -1,0 +1,32 @@
+body {
+	
+	background-color:grey;
+	font-family: sans-serif;
+}
+
+.navigation ul{
+	display: flex;
+	justify-content: right;
+
+}
+.navigation li{
+	margin: 30px;
+}
+.navigation a {
+	
+}
+
+.content {
+	padding: 0 70px;
+}
+
+a {
+	color: white;
+}
+img {
+	max-width: 150px;
+	border-radius: 50px 100px 100px 50px;
+	border: solid;
+	border-color: white;
+
+}

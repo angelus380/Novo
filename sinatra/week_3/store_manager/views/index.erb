@@ -1,0 +1,11 @@
+<ul>
+	<% @products.each do |product| %>
+		<li><%= "#{product.name} - Price: #{product.price}" %></li>
+	<% end %>
+</ul>
+<form method="post" action="/new">
+	<input name="name" placeholder="name">
+	<input name="price" placeholder="price">
+	<input name="brand" placeholder="brand">
+	<button>Add hash</button>
+</form>

@@ -34,7 +34,7 @@ get '/' do
   erb :product
 end
 
-get "/inspect/:name" do
+get "/inspect/" do
   @products= products.find do |product|
     product.name == params[:name]
   end

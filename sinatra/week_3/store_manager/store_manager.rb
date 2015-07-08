@@ -28,14 +28,32 @@ products = [
   Product.new({ id: 12, name: "apple iphone 5s", price: 589.90, brand: "apple" })
 ]
 
-get '/' do
+get  '/' do
   @products = products
   erb :index
+end
+
+get "/show/:id" do
+  @products = products
+  @products.find do |product|
+    if product.id == params[:id].to_i
+      @product = product
+    end
+  end
+  erb :show
 end
 
 post '/new' do
   @products = products
   id = products.last.id+1
   products << Product.new({ id: id, name: params[:name], price: params[:price], brand: params[:brand]})
+  erb :index
+end
+
+post "/delete/:id" do
+  @products = products
+  @products.delete_if do |product|
+    product.id == params[:id].to_i
+  end
   erb :index
 end

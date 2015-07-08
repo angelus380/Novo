@@ -1,11 +1,18 @@
 <ul>
 	<% @products.each do |product| %>
-		<li><%= "#{product.name} - Price: #{product.price}" %></li>
+		<li class="list-group-item"><%= "#{product.name} - Price: #{product.price}" %>
+			<form method="post" action="<%="/delete/#{product.id}"%>">
+				<button class="btn btn-default btn-xs">x</button>
+			</form>
+			<form method="get" action="<%="/show/#{product.id}"%>">
+				<button class="btn btn-default btn-xs">show</button>
+			</form>
+		</li>
 	<% end %>
 </ul>
 <form method="post" action="/new">
 	<input name="name" placeholder="name">
 	<input name="price" placeholder="price">
 	<input name="brand" placeholder="brand">
-	<button>Add hash</button>
+	<button class="btn btn-primary btn-sm">Add hash</button>
 </form>

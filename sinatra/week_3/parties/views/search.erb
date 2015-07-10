@@ -1,0 +1,12 @@
+<p>RESULT</p>
+<% @parties.each do |party| %>
+	<form method="GET" action="<%="/#{party.id}"%>">
+		<li><%= party.name %></li>
+		<button>show</button>
+	</form>
+	<form method="POST" action="/remove/<%="#{party.id}"%>">
+		<button>remove</button>
+	</form>
+<% end %>
+<p><%= "#{@a}" %></p>
+<a href="/"><button>Back</button></a>

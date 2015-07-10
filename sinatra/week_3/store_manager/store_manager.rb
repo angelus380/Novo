@@ -10,6 +10,9 @@ class Product
     @brand = hash[:brand]
   end
 
+  def change_name(name)
+  	@name = name
+  end
 end
 
 products = [
@@ -34,8 +37,7 @@ get  '/' do
 end
 
 get "/show/:id" do
-  @products = products
-  @products.find do |product|
+  @products = products.find do |product|
     if product.id == params[:id].to_i
       @product = product
     end
@@ -51,9 +53,23 @@ post '/new' do
 end
 
 post "/delete/:id" do
-  @products = products
-  @products.delete_if do |product|
+  @products = products.delete_if do |product|
     product.id == params[:id].to_i
   end
   erb :index
+end
+
+get "/edit" do 
+	@products = products.find do |product|
+    	product.id == params[:id].to_i
+	end
+	#erb :edit_form
+end
+
+post "/update" do 
+	products = products.find do |product|
+    	product.id == params[:id].to_i
+	end
+	product.change_name(params[:name])
+	redirect "/"
 end

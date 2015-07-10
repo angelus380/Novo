@@ -1,0 +1,19 @@
+<p>PARTY LIST</p>
+<a href="/"><button>ASC</button></a>
+<a href="/?sort=dsc"><button>DSC</button></a>
+<p></p>
+<% @parties.each do |party| %>
+	<form method="GET" action="<%="/#{party.id}"%>">
+		<li><%= party.name %></li>
+		<button>show</button>
+	</form>
+	<form method="POST" action="/remove/<%="#{party.id}"%>">
+		<button>remove</button>
+	</form>
+<% end %>
+
+<p>PARTY LIST</p>
+
+<form method="GET" action="/new">
+	<button>New</button>
+</form>

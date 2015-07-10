@@ -1,0 +1,8 @@
+<p>PARTY INFO</p>
+<p>Party Name: <%= @party.name %></p>
+<p>Description: <%= @party.description %></p>
+<p>Date: <%= @party.date_time %></p>
+<form method="GET" action="<%="/#{@party.id}"%>/edit">
+	<button>Edit</button>
+</form>
+<a href="/"><button>Back</button></a>

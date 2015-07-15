@@ -1,0 +1,36 @@
+<h1>TODO LIST</h1>
+<form method="POST" action="/new">
+	<input name="new" type="text">
+	<button>create</button>
+</form>
+
+<ul>
+	<p>To do</p>
+	<% @completed.each do |topic| %>
+			<li><%= topic.title %></li>
+			<li><%= topic.created_at %></li>
+			<form method="POST" action="/remove/<%= topic.id %>">
+				<input name="done" type="hidden">
+				<button>Remove</button>
+			</form>
+			<form method="POST" action="/undone/<%= topic.id %>">
+				<input name="undone" type="hidden" value="yes">
+				<button>Done</button>
+			</form>
+	<% end %>
+</ul>
+
+<ul>
+	<p>Done</p>
+	<% @notcompleted.each do |topic| %>
+			<li><%= topic.title %></li>
+			<form method="POST" action="/remove/<%= topic.id %>">
+				<input name="done" type="hidden">
+				<button>Remove</button>
+			</form>
+			<form method="POST" action="/done/<%= topic.id %>">
+				<input name="done" type="hidden" value="yes">
+				<button>Undone</button>
+			</form>
+	<% end %>
+</ul>

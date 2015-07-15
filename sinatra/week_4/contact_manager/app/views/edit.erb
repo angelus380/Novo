@@ -1,0 +1,10 @@
+<h1>Edit</h1>
+
+<form method="POST" action="/update/<%="#{@contact.id}"%>">
+	<input name="first_name" label="first_name" placeholder="first_name" value="<%= @contact.first_name %>" required>
+	<input name="last_name" label="last_name" placeholder="last_name" value="<%= @contact.last_name %>" required>
+	<input name="email" label="email" placeholder="email" value="<%= @contact.email %>" required>
+	<input name="phonenumber" label="phonenumber" placeholder="phonenumber" value="<%= @contact.phonenumber %>" required>
+	<input name="address" label="address" placeholder="address" value="<%= @contact.address %>" required>
+	<button>Edit</button>
+</form>

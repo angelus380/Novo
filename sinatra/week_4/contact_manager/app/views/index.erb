@@ -1,0 +1,23 @@
+<h1>Home Page</h1>
+
+<p>List</p>
+	<form method="GET" action="/">
+		<input type="hidden" name="order" value="asc">
+		<button>Asc</button>
+	</form>
+	<form method="GET" action="/">
+		<input type="hidden" name="order" value="dsc">
+		<button>Dsc</button>
+	</form>
+<ul>
+	<% @contacts.each do |contact| %>
+	
+		<li><%= "#{contact.first_name}, #{contact.last_name}" %></li>
+		<form method="POST" action="/remove/<%="#{contact.id}"%>">
+		<button>Remove</button>
+		</form>
+		<form method="GET" action="/contact/<%="#{contact.id}"%>">
+		<button>Details</button>
+		</form>
+	<%end%>
+</ul>

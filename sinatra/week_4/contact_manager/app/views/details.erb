@@ -1,0 +1,11 @@
+<h1>Details</h1>
+
+<li><%= "#{@contact.first_name}" %></li>
+<li><%= "#{@contact.last_name}" %></li>
+<li><%= "#{@contact.email}" %></li>
+<li><%= "#{@contact.phonenumber}" %></li>
+<li><%= "#{@contact.address}" %></li>
+
+<form method="GET" action="/edit/<%="#{@contact.id}"%>">
+	<button>Edit</button>
+</form>

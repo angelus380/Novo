@@ -1,0 +1,17 @@
+<h1>Product</h1>
+<h3>Edition</h3>
+<form method="POST" action="/update/product/<%= @product.id %>">
+	<label>Name</label>
+	<input name="name" value="<%= @product.name %>">
+	<label>Description</label>
+	<input name="description" value="<%= @product.description %>">
+	<label>Price</label>
+	<input name="price" value="<%= @product.price %>">
+	<p>Select Category</p>
+	None<input type="radio" name="category">
+	<% @categories.each do |category| %>
+		<%=category.name %> <%=category.id %>
+		<input type="radio" name="category" value="<%= category.id %>">
+	<% end %>
+	<button>Edit</button>
+</form>

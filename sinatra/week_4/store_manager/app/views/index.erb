@@ -1,1 +1,23 @@
 <h1>Home Page</h1>
+
+<ul>
+	<p><b>Products</b></p>
+	<% @products.each do |product| %>
+		<li>
+			<%= product.name %> =>
+			<%= product.price %> $
+			<%= product.category %>
+			<b>Description:</b> <%= product.description %>
+		</li>
+	<% end %>
+</ul>
+
+<ul>
+	<p><b>Categories</b></p>
+	<% @categories.each do |category| %>
+		<li>
+			<%= category.name %>
+			ID:<%= category.id %>
+		</li>
+	<% end %>
+</ul>

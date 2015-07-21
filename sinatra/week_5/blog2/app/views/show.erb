@@ -1,0 +1,16 @@
+<h1>Show Page</h1>
+<ul>
+	<div>
+		<li>
+			<b><%= @post.title %></b>
+			<p><%= @post.body %></p>
+		</li>
+	</div>
+</ul>
+
+<form method="POST" action="/show/<%= @post.id %>/comment">
+	<label>comment</label>
+	<textarea name="body" required></textarea>
+	<button>Add a Comment</button>
+</form>
+

@@ -1,0 +1,15 @@
+.header {
+	border-bottom: solid 2px gray;
+	color: blue;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+.footer {
+	border-top: solid 2px gray;
+	color: black;
+	padding-top: 10px;
+	padding-bottom :10px;
+	text-align: center
+}	

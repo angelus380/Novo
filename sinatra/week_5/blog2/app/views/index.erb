@@ -1,1 +1,18 @@
 <h1>Home Page</h1>
+
+<form method="POST" action="/create">
+	<label>Title</label>
+	<input name="title" required>
+	<textarea name="body" required></textarea>
+	<button>New Post</button>
+</form>
+
+<ul>
+	<% @posts.each do |post| %>
+		<div>
+			<li>
+				<p><b><a href="/show/<%= post.id %>"><%= post.title %></a></b></p>
+			</li>
+		</div>
+	<% end %>
+</ul>

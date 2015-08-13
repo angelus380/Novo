@@ -9,7 +9,7 @@ var hits = [];
 
 // Look for "E" in the text
 for(var i = 0; i < text.length; i++) {
-	if (text[i] === "E") {
+	if (text[i] === "E"){ //myName(0)
 		// If we find it, add characters up to
 		// the length of my name to the array
 		for(var j = i; j < (myName.length + i); j++) {

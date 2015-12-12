@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="app_store.js"></script>
+</head>
+<body ng-app="storeApp">
+	<h1>Store app</h1>
+	<div store-catalog></div>
+	<div store-cart></div>
+
+	<script type="text/ng-template" id="catalog.html"></script>
+
+	<div class="store-catalog">
+		<h2>{{ ctrl.title }}</h2>
+		<select>
+			<option value="$">Dollar</option>
+			<option value="€">Euro</option>
+		</select>
+		<ul>
+			<li ng-repeat="product in ctrl.products">
+				{{ product.name }}
+				{{ product.price | currency:ctrl.currency:2 }}
+			</li>
+		</ul>
+	</div>
+
+</body>
+</html>
